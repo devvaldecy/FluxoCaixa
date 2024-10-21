@@ -54,7 +54,6 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure LimparCampos;
   private
-
     tentativa : Integer;
   public
 

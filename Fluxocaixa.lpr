@@ -23,7 +23,6 @@ begin
   Application.CreateForm(TTabGlobal, TabGlobal);
   Application.CreateForm(Tfrmprincipal, frmprincipal);
   Application.CreateForm(Tfrmlogin, frmlogin);
-  Application.CreateForm(TfrmPesquisa, frmPesquisa);
   Application.Run;
 end.
 

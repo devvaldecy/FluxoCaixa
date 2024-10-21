@@ -20,6 +20,7 @@ type
     EdtUser: TEdit;
     Image1: TImage;
     Image2: TImage;
+    Image3: TImage;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;

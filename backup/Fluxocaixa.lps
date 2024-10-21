@@ -73,7 +73,7 @@
         <Filename Value="Classe\classe_plano.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="85"/>
+        <TopLine Value="82"/>
         <CursorPos Y="98"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -111,8 +111,7 @@
         <ComponentName Value="frm_cad_lcto"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="94"/>
         <CursorPos X="57" Y="117"/>
         <UsageCount Value="203"/>
@@ -136,10 +135,11 @@
         <ComponentName Value="frmPesquisa"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="20"/>
         <CursorPos X="5" Y="22"/>
-        <UsageCount Value="141"/>
+        <UsageCount Value="148"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -149,16 +149,30 @@
         <ComponentName Value="frmlogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="108"/>
-        <CursorPos X="56" Y="132"/>
-        <UsageCount Value="126"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="109"/>
+        <CursorPos X="56" Y="133"/>
+        <UsageCount Value="133"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory>
+    <JumpHistory HistoryIndex="3">
       <Position>
         <Filename Value="view\uprincipal.pas"/>
         <Caret Line="18" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="view\ucad_lcto.pas"/>
+        <Caret Line="117" Column="57" TopLine="94"/>
+      </Position>
+      <Position>
+        <Filename Value="view\u_login.pas"/>
+        <Caret Line="132" Column="56" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="view\u_login.pas"/>
+        <Caret Line="133" Column="56" TopLine="109"/>
       </Position>
     </JumpHistory>
     <RunParams>
