@@ -21,8 +21,8 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TTabGlobal, TabGlobal);
-  Application.CreateForm(Tfrmprincipal, frmprincipal);
   Application.CreateForm(Tfrmlogin, frmlogin);
+  Application.CreateForm(Tfrmprincipal, frmprincipal);
   Application.Run;
 end.
 
