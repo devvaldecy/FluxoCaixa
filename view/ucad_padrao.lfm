@@ -1,0 +1,141 @@
+object frmcad_padrao: Tfrmcad_padrao
+  Left = 257
+  Height = 383
+  Top = 250
+  Width = 583
+  Caption = 'Cadastro Padrão'
+  ClientHeight = 383
+  ClientWidth = 583
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Segoe UI Semibold'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnShow = FormShow
+  Position = poMainFormCenter
+  object pnpTITULO: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 583
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'Cadastro Padrão'
+    Color = 13477943
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 333
+    Top = 50
+    Width = 583
+    ActivePage = TsCadastro
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 1
+    object TsPESQUISA: TTabSheet
+      Caption = 'Pesquisa'
+      ClientHeight = 303
+      ClientWidth = 575
+      object Panel1: TPanel
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 575
+        Align = alTop
+        ClientHeight = 50
+        ClientWidth = 575
+        TabOrder = 0
+        object edtPESQUISA: TEdit
+          Tag = 99
+          Left = 16
+          Height = 25
+          Top = 16
+          Width = 432
+          TabOrder = 0
+        end
+        object BtnPesquisa: TSpeedButton
+          Left = 456
+          Height = 36
+          Top = 5
+          Width = 104
+          Caption = '&Pesquisa'
+        end
+      end
+    end
+    object TsCadastro: TTabSheet
+      Caption = 'Cadastro'
+      ClientHeight = 303
+      ClientWidth = 575
+      object pnpRODAPE: TPanel
+        Left = 0
+        Height = 50
+        Top = 253
+        Width = 575
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 50
+        ClientWidth = 575
+        Color = clSilver
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 0
+        object BtnIncluir: TSpeedButton
+          Left = 27
+          Height = 34
+          Top = 8
+          Width = 104
+          Caption = '&Incluir'
+          OnClick = BtnIncluirClick
+        end
+        object BtnAltera: TSpeedButton
+          Left = 131
+          Height = 34
+          Top = 8
+          Width = 104
+          Caption = '&Alterar'
+          OnClick = BtnAlteraClick
+        end
+        object BtnApaga: TSpeedButton
+          Left = 237
+          Height = 34
+          Top = 8
+          Width = 104
+          Caption = '&Apagar'
+          OnClick = BtnApagaClick
+        end
+        object BtnSalva: TSpeedButton
+          Left = 342
+          Height = 34
+          Top = 8
+          Width = 104
+          Caption = '&Salvar'
+          OnClick = BtnSalvaClick
+        end
+        object BtnCancela: TSpeedButton
+          Left = 447
+          Height = 34
+          Top = 8
+          Width = 104
+          Caption = '&Cancelar'
+          OnClick = BtnCancelaClick
+        end
+      end
+    end
+  end
+end

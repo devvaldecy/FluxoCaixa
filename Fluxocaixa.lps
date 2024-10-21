@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Fluxocaixa.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="47" Y="25"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\uprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmprincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="5"/>
+        <CursorPos Y="18"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\uconfigurabanco.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmconfigurarbanco"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="76"/>
+        <CursorPos X="2" Y="81"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="conexao\utabela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TabGlobal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos Y="8"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\ucad_padrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmcad_padrao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="95"/>
+        <CursorPos Y="101"/>
+        <UsageCount Value="214"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\ucad_planoconta.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmcad_planoconta"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <CursorPos Y="57"/>
+        <UsageCount Value="211"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Classe\classe_plano.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="85"/>
+        <CursorPos Y="98"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\ucad_contas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmcad_contas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="34" Y="150"/>
+        <UsageCount Value="211"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Classe\classe_conta.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="52" Y="145"/>
+        <UsageCount Value="208"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Classe\classe_lancamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="120"/>
+        <CursorPos X="59" Y="135"/>
+        <UsageCount Value="201"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\ucad_lcto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_cad_lcto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="94"/>
+        <CursorPos X="57" Y="117"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\umovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmmovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="3" Y="130"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\upesquisa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPesquisa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="20"/>
+        <CursorPos X="5" Y="22"/>
+        <UsageCount Value="148"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\u_login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmlogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="108"/>
+        <CursorPos X="56" Y="132"/>
+        <UsageCount Value="133"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="1">
+      <Position>
+        <Filename Value="view\uprincipal.pas"/>
+        <Caret Line="18" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="view\ucad_lcto.pas"/>
+        <Caret Line="117" Column="57" TopLine="94"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

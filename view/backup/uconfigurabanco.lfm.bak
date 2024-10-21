@@ -1,0 +1,133 @@
+object frmconfigurarbanco: Tfrmconfigurarbanco
+  Left = 294
+  Height = 212
+  Top = 250
+  Width = 431
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Configura Banco'
+  ClientHeight = 212
+  ClientWidth = 431
+  KeyPreview = True
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  Position = poMainFormCenter
+  object Label1: TLabel
+    Left = 8
+    Height = 32
+    Top = 5
+    Width = 181
+    Caption = 'Configura Banco'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Shape1: TShape
+    Left = 10
+    Height = 2
+    Top = 42
+    Width = 406
+  end
+  object btnSALVAR: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 164
+    Width = 120
+    Caption = '&Salvar '
+    OnClick = btnSALVARClick
+    TabOrder = 5
+  end
+  object btnCANCELA: TBitBtn
+    Left = 296
+    Height = 30
+    Top = 164
+    Width = 120
+    Caption = '&Cancelar'
+    OnClick = btnCANCELAClick
+    TabOrder = 6
+  end
+  object Label2: TLabel
+    Left = 10
+    Height = 15
+    Top = 53
+    Width = 39
+    Caption = 'Banco :'
+  end
+  object EdtBANCO: TEdit
+    Left = 10
+    Height = 23
+    Top = 72
+    Width = 184
+    TabOrder = 0
+  end
+  object Label3: TLabel
+    Left = 10
+    Height = 15
+    Top = 102
+    Width = 49
+    Caption = 'Servidor :'
+  end
+  object EdtSERVER: TEdit
+    Left = 10
+    Height = 23
+    Top = 124
+    Width = 184
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    Left = 10
+    Height = 15
+    Top = 175
+    Width = 33
+    Caption = 'Banco'
+  end
+  object edtPORTA: TEdit
+    Left = 8
+    Height = 23
+    Top = 171
+    Width = 72
+    NumbersOnly = True
+    TabOrder = 4
+  end
+  object Label5: TLabel
+    Left = 10
+    Height = 15
+    Top = 151
+    Width = 34
+    Caption = 'Porta :'
+  end
+  object Label6: TLabel
+    Left = 222
+    Height = 15
+    Top = 53
+    Width = 46
+    Caption = 'Usuário :'
+  end
+  object EdtUSUARIO: TEdit
+    Left = 222
+    Height = 23
+    Top = 72
+    Width = 184
+    TabOrder = 1
+  end
+  object Label7: TLabel
+    Left = 222
+    Height = 15
+    Top = 102
+    Width = 38
+    Caption = 'Senha :'
+  end
+  object EdtPASSWORD: TEdit
+    Left = 222
+    Height = 23
+    Top = 124
+    Width = 184
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 3
+  end
+end

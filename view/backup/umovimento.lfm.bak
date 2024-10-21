@@ -1,0 +1,427 @@
+object frmmovimento: Tfrmmovimento
+  Left = 297
+  Height = 421
+  Top = 250
+  Width = 651
+  Caption = 'Tela de Movimentações'
+  ClientHeight = 421
+  ClientWidth = 651
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  Position = poMainFormCenter
+  object pnpTITULO: TPanel
+    Left = 0
+    Height = 40
+    Top = 0
+    Width = 651
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'MOVIMENTO'
+    Color = 13477943
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 103
+    Top = 40
+    Width = 651
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 103
+    ClientWidth = 651
+    Color = 16697494
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 7
+      Height = 17
+      Top = 3
+      Width = 50
+      Caption = 'CÓDIGO'
+    end
+    object edtCOD: TEdit
+      Left = 7
+      Height = 25
+      Top = 22
+      Width = 80
+      TabOrder = 0
+      OnExit = edtCODExit
+      OnKeyDown = edtCODKeyDown
+    end
+    object Label2: TLabel
+      Left = 101
+      Height = 17
+      Top = 3
+      Width = 70
+      Caption = 'DESCRIÇÃO'
+    end
+    object edtDESC: TEdit
+      Left = 99
+      Height = 25
+      Top = 22
+      Width = 208
+      Enabled = False
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 7
+      Height = 17
+      Top = 48
+      Width = 81
+      Caption = 'DATA INICIAL'
+    end
+    object dtINICIO: TDBDateEdit
+      Left = 8
+      Height = 25
+      Top = 68
+      Width = 103
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      DateOrder = doNone
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 2
+      Text = 'dtINICIO'
+    end
+    object Label4: TLabel
+      Left = 120
+      Height = 17
+      Top = 49
+      Width = 72
+      Caption = 'DATA FINAL'
+    end
+    object btnOk: TSpeedButton
+      Left = 328
+      Height = 55
+      Top = 13
+      Width = 56
+      Caption = 'Ok'
+      OnClick = btnOkClick
+    end
+    object Panel2: TPanel
+      Left = 469
+      Height = 103
+      Top = 0
+      Width = 182
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 103
+      ClientWidth = 182
+      ParentBackground = False
+      TabOrder = 3
+      object Panel3: TPanel
+        Left = 0
+        Height = 86
+        Top = 17
+        Width = 182
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 86
+        ClientWidth = 182
+        Color = 16745997
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 0
+        object Panel4: TPanel
+          Left = 0
+          Height = 34
+          Top = 0
+          Width = 182
+          Align = alTop
+          BevelOuter = bvNone
+          Caption = 'SALDO ANTERIOR'
+          Color = 8404992
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 0
+        end
+        object SaldoAnterior: TCurrencyEdit
+          Left = 14
+          Height = 33
+          Top = 45
+          Width = 150
+          Alignment = taCenter
+          BorderStyle = bsNone
+          Color = 16745997
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -19
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Anchors = [akTop, akLeft, akBottom]
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+          ZeroEmpty = False
+        end
+      end
+    end
+  end
+  object dtFIM: TDBDateEdit
+    Left = 118
+    Height = 25
+    Top = 108
+    Width = 103
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+    Text = 'dtFIM'
+  end
+  object Panel5: TPanel
+    Left = 0
+    Height = 79
+    Top = 342
+    Width = 651
+    Align = alBottom
+    ClientHeight = 79
+    ClientWidth = 651
+    Color = 15980417
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 3
+    object Panel6: TPanel
+      Left = 468
+      Height = 77
+      Top = 1
+      Width = 182
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 77
+      ClientWidth = 182
+      ParentBackground = False
+      TabOrder = 0
+      object Panel7: TPanel
+        Left = 0
+        Height = 71
+        Top = 6
+        Width = 182
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 71
+        ClientWidth = 182
+        Color = 16745997
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 0
+        object Panel8: TPanel
+          Left = 0
+          Height = 27
+          Top = 0
+          Width = 182
+          Align = alTop
+          BevelOuter = bvNone
+          Caption = 'SALDO ATUAL'
+          Color = 8404992
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 0
+        end
+        object SaldoPeriodo: TCurrencyEdit
+          Left = 14
+          Height = 33
+          Top = 38
+          Width = 150
+          Alignment = taCenter
+          BorderStyle = bsNone
+          Color = 16745997
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -19
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Anchors = [akTop, akLeft, akBottom]
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+          ZeroEmpty = False
+        end
+      end
+    end
+    object btnINCLUI: TSpeedButton
+      Left = 16
+      Height = 40
+      Top = 24
+      Width = 88
+      Caption = '&Incluir'
+      OnClick = btnINCLUIClick
+    end
+    object btnIMPRIMI: TSpeedButton
+      Left = 104
+      Height = 40
+      Top = 24
+      Width = 88
+      Caption = '&Imprimi'
+      OnClick = btnIMPRIMIClick
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 199
+    Top = 143
+    Width = 651
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 60
+        FieldName = 'id_lcto'
+      end    
+      item
+        Title.Caption = 'DATA'
+        Width = 75
+        FieldName = 'data_mvto'
+      end    
+      item
+        Title.Caption = 'PLANO'
+        Width = 200
+        FieldName = 'plano'
+      end    
+      item
+        Title.Caption = 'DESCRIÇÃO'
+        Width = 250
+        FieldName = 'descricao'
+      end    
+      item
+        Title.Caption = 'VALOR'
+        FieldName = 'valor'
+      end>
+    DataSource = dsMov
+    FixedColor = clBlack
+    FixedCols = 0
+    Flat = True
+    Options = [dgTitles, dgColumnResize, dgColumnMove, dgColLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete, dgDisableInsert]
+    TabOrder = 4
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clWhite
+    TitleFont.Height = -15
+    TitleFont.Name = 'Arial'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+  end
+  object qrMov: TZQuery
+    Connection = TabGlobal.conexao
+    SQL.Strings = (
+      'select l.id_lcto, l.data_mvto, p.descricao plano, l.descricao, l.valor  '
+      'from lancamentos l'
+      'join planos p on p.id_plano = l.plano'
+    )
+    Params = <>
+    Left = 560
+    Top = 320
+    object qrMovid_lcto: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'id_lcto'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrMovdata_mvto: TZDateField
+      FieldKind = fkData
+      FieldName = 'data_mvto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrMovplano: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'plano'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 80
+    end
+    object qrMovdescricao: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qrMovvalor: TZBCDField
+      FieldKind = fkData
+      FieldName = 'valor'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 15
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+  end
+  object dsMov: TDataSource
+    DataSet = qrMov
+    Left = 520
+    Top = 320
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMov
+    Left = 344
+    Top = 360
+  end
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    OnGetValue = frReport1GetValue
+    Left = 280
+    Top = 360
+  end
+end

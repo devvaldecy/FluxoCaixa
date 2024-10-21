@@ -1,0 +1,197 @@
+object frm_cad_lcto: Tfrm_cad_lcto
+  Left = 297
+  Height = 296
+  Top = 250
+  Width = 485
+  Caption = 'Lançamento de Contas'
+  ClientHeight = 296
+  ClientWidth = 485
+  Font.CharSet = ANSI_CHARSET
+  Font.Name = 'Segoe UI Semibold'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  Position = poMainFormCenter
+  object pnpTITULO: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 485
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'Lançamento de Contas'
+    Color = 13477943
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 13
+    Height = 15
+    Top = 60
+    Width = 40
+    Caption = 'Conta .:'
+  end
+  object edtConta: TEdit
+    Tag = 99
+    Left = 13
+    Height = 23
+    Top = 84
+    Width = 80
+    Enabled = False
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 13
+    Height = 15
+    Top = 111
+    Width = 57
+    Caption = 'Data Lcto :'
+  end
+  object edtData: TDateTimePicker
+    Left = 13
+    Height = 23
+    Top = 133
+    Width = 91
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 3
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 45559
+    Time = 0.406553229164274
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object Label3: TLabel
+    Left = 104
+    Height = 15
+    Top = 111
+    Width = 39
+    Caption = 'Plano .:'
+  end
+  object edtCodPlano: TEdit
+    Left = 104
+    Height = 23
+    Top = 133
+    Width = 56
+    TabOrder = 4
+    OnExit = edtCodPlanoExit
+    OnKeyDown = edtCodPlanoKeyDown
+  end
+  object edtDescPlano: TEdit
+    Left = 167
+    Height = 23
+    Top = 133
+    Width = 217
+    Enabled = False
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object edtDescLcto: TEdit
+    Left = 13
+    Height = 23
+    Top = 183
+    Width = 456
+    TabOrder = 7
+  end
+  object Label4: TLabel
+    Left = 13
+    Height = 15
+    Top = 161
+    Width = 144
+    Caption = 'Descrição do Lançamento :'
+  end
+  object Label5: TLabel
+    Left = 13
+    Height = 15
+    Top = 210
+    Width = 33
+    Caption = 'Valor :'
+  end
+  object edtValor: TCurrencyEdit
+    Left = 13
+    Height = 23
+    Top = 231
+    Width = 80
+    Alignment = taRightJustify
+    TabOrder = 8
+  end
+  object edtDescConta: TEdit
+    Tag = 99
+    Left = 104
+    Height = 23
+    Top = 84
+    Width = 365
+    Enabled = False
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object Label6: TLabel
+    Left = 104
+    Height = 15
+    Top = 60
+    Width = 111
+    Caption = 'Descrição da Conta .:'
+  end
+  object Label7: TLabel
+    Left = 167
+    Height = 15
+    Top = 111
+    Width = 114
+    Caption = 'Descrição do Plano  .:'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 362
+    Height = 42
+    Top = 212
+    Width = 107
+    Caption = '&Salvar'
+    OnClick = SpeedButton1Click
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 32
+    Top = 264
+    Width = 485
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 13477943
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 9
+  end
+  object edtTipo: TEdit
+    Left = 395
+    Height = 23
+    Top = 133
+    Width = 74
+    Enabled = False
+    TabOrder = 6
+  end
+  object Label8: TLabel
+    Left = 398
+    Height = 15
+    Top = 111
+    Width = 30
+    Caption = 'Tipo :'
+  end
+end
