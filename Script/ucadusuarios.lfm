@@ -1,0 +1,10 @@
+inherited frmcad_usuarios: Tfrmcad_usuarios
+  Position = poOwnerFormCenter
+  inherited Panel1: TPanel
+    Caption = 'Cadastro de Usuários'
+    Font.Height = -19
+  end
+  inherited pnpTITULO: TPanel
+    Caption = 'Cadastro de Usuários'
+  end
+end

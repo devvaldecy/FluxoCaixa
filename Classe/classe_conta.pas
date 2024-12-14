@@ -31,9 +31,9 @@ uses
          published
            property id_conta  : Integer read Fid_conta write Fid_conta;
            property descricao : String read Fdescricao write Fdescricao;
-           property banco      : String read Fbanco write Fbanco;
-           property agencia      : String read Fagencia write Fagencia;
-           property conta      : String read Fconta write Fconta;
+           property banco     : String read Fbanco write Fbanco;
+           property agencia   : String read Fagencia write Fagencia;
+           property conta     : String read Fconta write Fconta;
     end;
 
 implementation

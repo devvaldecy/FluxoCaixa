@@ -138,6 +138,7 @@ begin
   plano.incluir;
   cliquebotao:=cbNome;
   ShowMessage('Registro salvo com sucesso...');
+  EdtDescricao.SetFocus;
 end;
 
 procedure Tfrmcad_planoconta.DBGrid1DblClick(Sender: TObject);

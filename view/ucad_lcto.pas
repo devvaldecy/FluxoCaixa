@@ -14,14 +14,15 @@ type
   { Tfrm_cad_lcto }
 
   Tfrm_cad_lcto = class(TForm)
+    btnLIMPAR: TSpeedButton;
+    edtCodPlano: TEdit;
+    edtConta: TEdit;
+    edtData: TDateTimePicker;
+    edtDescConta: TEdit;
+    edtDescLcto: TEdit;
+    edtDescPlano: TEdit;
     edtTipo: TEdit;
     edtValor: TCurrencyEdit;
-    edtData: TDateTimePicker;
-    edtConta: TEdit;
-    edtCodPlano: TEdit;
-    edtDescPlano: TEdit;
-    edtDescLcto: TEdit;
-    edtDescConta: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -31,8 +32,12 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
     pnpTITULO: TPanel;
     SpeedButton1: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    procedure btnLIMPARClick(Sender: TObject);
     procedure edtCodPlanoExit(Sender: TObject);
     procedure edtCodPlanoKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -41,6 +46,7 @@ type
     procedure FormKeyPress(Sender: TObject; var Key: char);
     procedure FormShow(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
   private
     procedure limpa_campos;
 
@@ -90,6 +96,11 @@ begin
         ShowMessage('Erro ao incluir');
 end;
 
+procedure Tfrm_cad_lcto.SpeedButton3Click(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure Tfrm_cad_lcto.edtCodPlanoExit(Sender: TObject);
 begin
   if StrToIntDef(edtCodPlano.Text,0)>0 then
@@ -105,6 +116,11 @@ begin
     ShowMessage('Código Inválido !..');
     edtCodPlano.SetFocus;
   end;
+end;
+
+procedure Tfrm_cad_lcto.btnLIMPARClick(Sender: TObject);
+begin
+  limpa_campos;
 end;
 
 procedure Tfrm_cad_lcto.edtCodPlanoKeyDown(Sender: TObject; var Key: Word;

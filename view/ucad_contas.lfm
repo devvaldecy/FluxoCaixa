@@ -1,24 +1,31 @@
 inherited frmcad_contas: Tfrmcad_contas
+  Height = 406
   Caption = 'Cadastro de Contas'
+  ClientHeight = 406
   KeyPreview = True
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  inherited pnpTITULO: TPanel
-    Caption = 'Cadastro Contas'
+  inherited Panel1: TPanel
+    Caption = 'Cadastro de Contas'
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
   end
   inherited PageControl1: TPageControl
-    ActivePage = TsPESQUISA
-    TabIndex = 0
+    Height = 382
+    ActivePage = TsCadastro
+    TabIndex = 1
+    TabOrder = 2
     inherited TsPESQUISA: TTabSheet
-      inherited Panel1: TPanel
+      ClientHeight = 352
+      inherited Panel2: TPanel
         inherited BtnPesquisa: TSpeedButton
           OnClick = BtnPesquisaClick
         end
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 253
+        Height = 302
         Top = 50
         Width = 575
         Align = alClient
@@ -74,8 +81,10 @@ inherited frmcad_contas: Tfrmcad_contas
       end
     end
     inherited TsCadastro: TTabSheet
+      ClientHeight = 352
       OnContextPopup = TsCadastroContextPopup
       inherited pnpRODAPE: TPanel
+        Top = 302
         inherited BtnIncluir: TSpeedButton
           OnClick = BtnIncluirClick
         end
@@ -96,7 +105,7 @@ inherited frmcad_contas: Tfrmcad_contas
         Tag = 99
         Left = 23
         Height = 25
-        Top = 36
+        Top = 57
         Width = 80
         CharCase = ecUppercase
         Enabled = False
@@ -106,21 +115,21 @@ inherited frmcad_contas: Tfrmcad_contas
       object Label3: TLabel[2]
         Left = 24
         Height = 17
-        Top = 13
+        Top = 34
         Width = 53
         Caption = 'Código .:'
       end
       object Label4: TLabel[3]
         Left = 23
         Height = 17
-        Top = 67
+        Top = 88
         Width = 67
         Caption = 'Descrição .:'
       end
       object EdtDescricao: TEdit[4]
         Left = 23
         Height = 25
-        Top = 93
+        Top = 114
         Width = 528
         CharCase = ecUppercase
         TabOrder = 2
@@ -128,14 +137,14 @@ inherited frmcad_contas: Tfrmcad_contas
       object Label5: TLabel[5]
         Left = 23
         Height = 17
-        Top = 126
+        Top = 147
         Width = 47
         Caption = 'Banco .:'
       end
       object EdtBANCO: TEdit[6]
         Left = 23
         Height = 25
-        Top = 152
+        Top = 173
         Width = 275
         CharCase = ecUppercase
         MaxLength = 20
@@ -144,14 +153,14 @@ inherited frmcad_contas: Tfrmcad_contas
       object Label6: TLabel[7]
         Left = 324
         Height = 17
-        Top = 126
+        Top = 147
         Width = 58
         Caption = 'Agência .:'
       end
       object EdtAGENCIA: TEdit[8]
         Left = 324
         Height = 25
-        Top = 152
+        Top = 173
         Width = 227
         CharCase = ecUppercase
         MaxLength = 20
@@ -160,14 +169,14 @@ inherited frmcad_contas: Tfrmcad_contas
       object Label7: TLabel[9]
         Left = 23
         Height = 17
-        Top = 185
+        Top = 206
         Width = 46
         Caption = 'Conta .:'
       end
       object EdtCONTA: TEdit[10]
         Left = 23
         Height = 25
-        Top = 209
+        Top = 230
         Width = 273
         CharCase = ecUppercase
         MaxLength = 20
@@ -175,29 +184,33 @@ inherited frmcad_contas: Tfrmcad_contas
       end
     end
   end
-  object Label2: TLabel[2]
+  inherited pnpTITULO: TPanel
+    Caption = 'Cadastro Contas'
+    TabOrder = 1
+  end
+  object Label2: TLabel[3]
     Left = 21
     Height = 17
-    Top = 153
+    Top = 174
     Width = 67
     Caption = 'Descrição .:'
   end
-  object Label1: TLabel[3]
+  object Label1: TLabel[4]
     Left = 20
     Height = 17
     Top = 80
     Width = 53
     Caption = 'Código .:'
   end
-  object qrPESQ: TZQuery[4]
+  object qrPESQ: TZQuery[5]
     Connection = TabGlobal.conexao
     SQL.Strings = (
       'select * from contas'
       'ORDER BY descricao limit 30;'
     )
     Params = <>
-    Left = 328
-    Top = 280
+    Left = 496
+    Top = 360
     object qrPESQid_conta: TZIntegerField
       FieldKind = fkData
       FieldName = 'id_conta'
@@ -247,9 +260,9 @@ inherited frmcad_contas: Tfrmcad_contas
       Size = 15
     end
   end
-  object dsPESQ: TDataSource[5]
+  object dsPESQ: TDataSource[6]
     DataSet = qrPESQ
-    Left = 368
-    Top = 280
+    Left = 536
+    Top = 360
   end
 end

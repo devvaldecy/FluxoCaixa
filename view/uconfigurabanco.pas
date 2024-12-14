@@ -13,13 +13,13 @@ type
   { Tfrmconfigurarbanco }
 
   Tfrmconfigurarbanco = class(TForm)
-    btnSALVAR: TBitBtn;
     btnCANCELA: TBitBtn;
+    btnSALVAR: TBitBtn;
     EdtBANCO: TEdit;
-    EdtUSUARIO: TEdit;
+    EdtPASSWORD: TEdit;
     edtPORTA: TEdit;
     EdtSERVER: TEdit;
-    EdtPASSWORD: TEdit;
+    EdtUSUARIO: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -27,11 +27,15 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
     Shape1: TShape;
+    SpeedButton3: TSpeedButton;
     procedure btnCANCELAClick(Sender: TObject);
     procedure btnSALVARClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
     procedure FormShow(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
   private
     procedure salva_ini;
     procedure ler_ini;
@@ -72,6 +76,11 @@ end;
 procedure Tfrmconfigurarbanco.FormShow(Sender: TObject);
 begin
   ler_ini;
+end;
+
+procedure Tfrmconfigurarbanco.SpeedButton3Click(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure Tfrmconfigurarbanco.salva_ini;

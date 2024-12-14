@@ -24,7 +24,7 @@ var
   TabGlobal: TTabGlobal;
 
 implementation
-uses uprincipal, upesquisa, u_login;
+uses uprincipal, upesquisa;
 
 {$R *.lfm}
 

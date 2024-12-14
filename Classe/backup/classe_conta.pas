@@ -149,7 +149,6 @@ begin
   qrALT.ParamByName('conta').AsString         :=conta;
   try
     qrALT.ExecSQL;
-    EdtDescricao.setfocus;
     Result := true;
   Except
     on e: Exception do

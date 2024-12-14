@@ -11,8 +11,13 @@ object TabGlobal: TTabGlobal
     )
     BeforeConnect = conexaoBeforeConnect
     DisableSavepoints = False
+    HostName = 'localhost'
     Port = 1265
+    Database = 'Fluxo_caixa'
+    User = 'suporte'
+    Password = 'Info@4321'
     Protocol = 'mariadb'
+    LibraryLocation = 'C:\Users\AUDIO\Documents\Projetos\FluxoCaixa\libmariadb.dll'
     Left = 32
     Top = 16
   end

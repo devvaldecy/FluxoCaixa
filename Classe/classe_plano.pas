@@ -95,6 +95,7 @@ begin
 
   //Pesquisa de dados na tabela plano
 
+  qrPESQUISA := TZQuery.Create(nil);
   qrPESQUISA.Connection := TabGlobal.conexao;
   qrPESQUISA.SQL.Add('select * from planos');
   qrPESQUISA.SQL.Add('where id_plano = :nCODIGO');

@@ -46,6 +46,7 @@ type
     qrMov: TZQuery;
     SaldoPeriodo: TCurrencyEdit;
     btnIMPRIMI: TSpeedButton;
+    SpeedButton3: TSpeedButton;
     procedure btnIMPRIMIClick(Sender: TObject);
     procedure btnINCLUIClick(Sender: TObject);
     procedure btnOkClick(Sender: TObject);
@@ -56,6 +57,7 @@ type
     procedure FormKeyPress(Sender: TObject; var Key: char);
     procedure FormShow(Sender: TObject);
     procedure frReport1GetValue(const ParName: String; var ParValue: Variant);
+    procedure SpeedButton3Click(Sender: TObject);
   private
 
     procedure Movimento(nCOD:Integer; dIinicio, dFinal:Tdate);
@@ -178,6 +180,11 @@ begin
         ParValue:= FloatToStr(SaldoAnterior.Value);
         if ParName = 'Saldofinal' then
          ParValue:= FloatToStr(SaldoPeriodo.Value);
+end;
+
+procedure Tfrmmovimento.SpeedButton3Click(Sender: TObject);
+begin
+  close;
 end;
 
 procedure Tfrmmovimento.Movimento(nCOD: Integer; dIinicio, dFinal: Tdate);

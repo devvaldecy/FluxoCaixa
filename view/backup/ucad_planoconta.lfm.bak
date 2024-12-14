@@ -10,21 +10,28 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  inherited pnpTITULO: TPanel
+  ParentDoubleBuffered = False
+  inherited Panel1: TPanel
     Width = 581
-    Caption = 'Cadastro Plano de Contas'
+    BevelOuter = bvNone
+    Caption = 'Cadatro de Planos de Contas'
+    ClientWidth = 581
+    inherited SpeedButton1: TSpeedButton
+      Left = 558
+      Height = 23
+      Top = 0
+    end
   end
   inherited PageControl1: TPageControl
     Width = 581
     inherited TsPESQUISA: TTabSheet
-      ClientHeight = 304
+      ClientHeight = 331
       ClientWidth = 573
-      inherited Panel1: TPanel
+      inherited Panel2: TPanel
         Width = 573
-        BevelOuter = bvNone
         ClientWidth = 573
         inherited edtPESQUISA: TEdit
-          Height = 24
+          Height = 23
           CharCase = ecUppercase
         end
         inherited BtnPesquisa: TSpeedButton
@@ -33,7 +40,7 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 254
+        Height = 281
         Top = 50
         Width = 573
         Align = alClient
@@ -81,10 +88,10 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       end
     end
     inherited TsCadastro: TTabSheet
-      ClientHeight = 304
+      ClientHeight = 331
       ClientWidth = 573
       inherited pnpRODAPE: TPanel
-        Top = 254
+        Top = 281
         Width = 573
         ClientWidth = 573
         TabOrder = 3
@@ -106,7 +113,7 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       end
       object Label1: TLabel[1]
         Left = 74
-        Height = 16
+        Height = 15
         Top = 47
         Width = 49
         Caption = 'Código .:'
@@ -114,7 +121,7 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       object EdtCODIGO: TEdit[2]
         Tag = 99
         Left = 74
-        Height = 24
+        Height = 23
         Top = 74
         Width = 80
         CharCase = ecUppercase
@@ -124,14 +131,14 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       end
       object Label2: TLabel[3]
         Left = 74
-        Height = 16
+        Height = 15
         Top = 105
-        Width = 64
+        Width = 62
         Caption = 'Descrição .:'
       end
       object EdtDescricao: TEdit[4]
-        Left = 80
-        Height = 24
+        Left = 74
+        Height = 23
         Top = 131
         Width = 451
         CharCase = ecUppercase
@@ -139,18 +146,18 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       end
       object Label3: TLabel[5]
         Left = 74
-        Height = 16
+        Height = 15
         Top = 164
         Width = 33
         Caption = 'Tipo .:'
       end
       object cmbTipo: TComboBox[6]
         Left = 74
-        Height = 24
+        Height = 23
         Top = 190
         Width = 54
         CharCase = ecUppercase
-        ItemHeight = 16
+        ItemHeight = 15
         Items.Strings = (
           'C'
           'D'
@@ -160,7 +167,11 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       end
     end
   end
-  object qrPESQ: TZQuery[2]
+  inherited pnpTITULO: TPanel
+    Width = 581
+    Caption = 'Cadastro Plano de Contas'
+  end
+  object qrPESQ: TZQuery[3]
     Connection = TabGlobal.conexao
     SQL.Strings = (
       'select * from planos'
@@ -199,7 +210,7 @@ inherited frmcad_planoconta: Tfrmcad_planoconta
       Size = 1
     end
   end
-  object dsPESQ: TDataSource[3]
+  object dsPESQ: TDataSource[4]
     DataSet = qrPESQ
     Left = 336
     Top = 270

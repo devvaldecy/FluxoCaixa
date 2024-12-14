@@ -15,9 +15,9 @@ object TabGlobal: TTabGlobal
     Port = 1265
     Database = 'Fluxo_caixa'
     User = 'suporte'
-    Password = 'Info@4321#'
+    Password = 'Info@4321'
     Protocol = 'mariadb'
-    LibraryLocation = 'C:\Users\valde\Documents\FluxoCaixa\libmariadb.dll'
+    LibraryLocation = 'C:\Users\AUDIO\Documents\Projetos\FluxoCaixa\libmariadb.dll'
     Left = 32
     Top = 16
   end

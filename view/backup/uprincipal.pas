@@ -6,8 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Buttons, ComCtrls, ucad_padrao, ucad_planoconta, umovimento, u_login,
-  IniFiles;
+  Buttons, ComCtrls, ucad_padrao, ucad_planoconta, umovimento, ucadusuarios, usobre, IniFiles;
 
 type
 
@@ -21,6 +20,11 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    lbData: TLabel;
+    lbLhora: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
     pnlUSER: TPanel;
     pnltop: TPanel;
     pnpEsquerda: TPanel;
@@ -29,6 +33,10 @@ type
     btnPLANOS: TSpeedButton;
     btnLCTO: TSpeedButton;
     btnSAIR: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
     TsBar: TStatusBar;
     tstimer: TTimer;
     procedure btnCFGClick(Sender: TObject);
@@ -38,6 +46,10 @@ type
     procedure btnSAIRClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
     procedure tstimerTimer(Sender: TObject);
   private
     procedure ler_ini;
@@ -87,11 +99,46 @@ begin
   end;
 end;
 
+procedure Tfrmprincipal.SpeedButton1Click(Sender: TObject);
+begin
+  frmcad_usuarios := Tfrmcad_usuarios.Create(Self);
+  try
+    frmcad_usuarios.ShowModal;
+  finally
+    FreeAndNil(frmcad_usuarios);
+  end;
+end;
+
+procedure Tfrmprincipal.SpeedButton2Click(Sender: TObject);
+begin
+  frmSobre := TfrmSobre.Create(Self);
+  try
+    frmSobre.ShowModal;
+  finally
+    FreeAndNil(frmSobre);
+  end;
+end;
+
+procedure Tfrmprincipal.SpeedButton3Click(Sender: TObject);
+begin
+ if MessageDlg ( ' Até breve .......... ' , 'Informação do Sistema ?' , mtConfirmation ,
+                 [ mbYes , mbNo ] , 0 )  = mrYes
+    then  {Execute resto do programa}
+ Application.Terminate;
+end;
+
+procedure Tfrmprincipal.SpeedButton4Click(Sender: TObject);
+begin
+  Application.Minimize;
+end;
+
 procedure Tfrmprincipal.tstimerTimer(Sender: TObject);
 begin
- TsBar.Panels [2].Text := ' '+datetostr(date);// para data
- TsBar.Panels [3].Text := ' '+timetostr(now);//para hora
+ lbData.Caption        := FormatDateTime('DD/MM/YY', Now);// para data
+ lbLhora.Caption       := ' '+timetostr(now);//para hora
  TsBar.Panels [1].Text :=  'Sistema Fluxo de Caixa';
+ TsBar.Panels [2].Text :=  'IP .: 192.168.1.103';
+ TsBar.Panels [3].Text :=  'Reg. para.: Valdecy Infor LTDA';
 end;
 
 procedure Tfrmprincipal.ler_ini;

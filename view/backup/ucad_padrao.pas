@@ -24,16 +24,19 @@ type
     edtPESQUISA: TEdit;
     PageControl1: TPageControl;
     Panel1: TPanel;
+    Panel2: TPanel;
     pnpRODAPE: TPanel;
     pnpTITULO: TPanel;
-    TsPESQUISA: TTabSheet;
+    SpeedButton1: TSpeedButton;
     TsCadastro: TTabSheet;
+    TsPESQUISA: TTabSheet;
     procedure BtnAlteraClick(Sender: TObject);
     procedure BtnApagaClick(Sender: TObject);
     procedure BtnCancelaClick(Sender: TObject);
     procedure BtnIncluirClick(Sender: TObject);
     procedure BtnSalvaClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     procedure botao_edicao(lFPLAG:Boolean);
     procedure limpa_campos;
@@ -57,6 +60,11 @@ begin
   botao_edicao(false);
 end;
 
+procedure Tfrmcad_padrao.SpeedButton1Click(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure Tfrmcad_padrao.BtnIncluirClick(Sender: TObject);
 begin
   limpa_campos;
@@ -77,6 +85,7 @@ end;
 
 procedure Tfrmcad_padrao.BtnApagaClick(Sender: TObject);
 begin
+  limpa_campos;
   botao_edicao(False);
 end;
 

@@ -95,7 +95,8 @@ begin
 
   //Pesquisa de dados na tabela plano
 
-   qrPESQUISA.Connection := TabGlobal.conexao;
+  qrPESQUISA := TZQuery.Create(nil);
+  qrPESQUISA.Connection := TabGlobal.conexao;
   qrPESQUISA.SQL.Add('select * from planos');
   qrPESQUISA.SQL.Add('where id_plano = :nCODIGO');
   qrPESQUISA.ParamByName('nCODIGO').AsInteger:=codigo;
@@ -156,15 +157,18 @@ begin
 
   // Alterar dados da tabela planos
 
-  cSQL:=  'DELETE FROM planos '+
-          'WHERE '+
-          'planos.id_plano = :OLD_id_plano';
-
+  cSQL:=  'UPDATE planos SET '+
+          '   descricao = :descricao, '+
+          '   tipo = :tipo '+
+          'WHERE'+
+          '   id_plano = :OLD_id_plano';
 
   qrEXC := TZQuery.Create(nil);
   qrEXC.Connection := TabGlobal.conexao;
   qrEXC.SQL.Text:=cSQL;
   qrEXC.ParamByName('OLD_id_plano').AsInteger:= codigo;
+  qrEXC.ParamByName('descricao').AsString    := descricao;
+  qrEXC.ParamByName('tipo').AsString         := tipo;
   try
     qrEXC.ExecSQL;
     Result := true;
@@ -172,7 +176,7 @@ begin
     on e: Exception do
     Begin
       Result := false;
-      ShowMessage('Erro ao excluir o plano'+sLineBreak+
+      ShowMessage('Erro ao atualizar o plano'+sLineBreak+
       e.ClassName+sLineBreak+e.Message);
     end;
   end;
