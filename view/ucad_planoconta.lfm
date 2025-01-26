@@ -1,0 +1,219 @@
+inherited frmcad_planoconta: Tfrmcad_planoconta
+  Width = 581
+  Caption = 'Cadastro Plano de Conta'
+  ClientWidth = 581
+  Font.Height = -12
+  Font.Name = '@Arial Unicode MS'
+  Font.Style = []
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  ParentDoubleBuffered = False
+  inherited Panel1: TPanel
+    Width = 581
+    BevelOuter = bvNone
+    Caption = 'Cadatro de Planos de Contas'
+    ClientWidth = 581
+    Font.Height = -19
+    inherited SpeedButton1: TSpeedButton
+      Left = 558
+      Height = 23
+      Top = 0
+    end
+  end
+  inherited PageControl1: TPageControl
+    Width = 581
+    inherited TsPESQUISA: TTabSheet
+      ClientHeight = 330
+      ClientWidth = 573
+      inherited Panel2: TPanel
+        Width = 573
+        ClientWidth = 573
+        inherited edtPESQUISA: TEdit
+          Height = 24
+          CharCase = ecUppercase
+        end
+        inherited BtnPesquisa: TSpeedButton
+          OnClick = BtnPesquisaClick
+        end
+      end
+      object DBGrid1: TDBGrid[1]
+        Left = 0
+        Height = 280
+        Top = 50
+        Width = 573
+        Align = alClient
+        AlternateColor = 16574413
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'CÓDIGO'
+            Width = 70
+            FieldName = 'id_plano'
+          end        
+          item
+            Title.Caption = 'DESCRIÇÃO'
+            Width = 250
+            FieldName = 'descricao'
+          end        
+          item
+            Title.Color = clBlack
+            Title.Caption = 'TIPO'
+            Width = 50
+            FieldName = 'tipo'
+          end>
+        DataSource = dsPESQ
+        FixedColor = clBlack
+        FixedCols = 0
+        Flat = True
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = '@Arial Unicode MS'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        Options = [dgTitles, dgColumnResize, dgColumnMove, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete, dgDisableInsert]
+        ParentFont = False
+        TabOrder = 1
+        TitleFont.CharSet = ANSI_CHARSET
+        TitleFont.Color = clWhite
+        TitleFont.Height = -12
+        TitleFont.Name = '@Arial Unicode MS'
+        TitleFont.Pitch = fpVariable
+        TitleFont.Quality = fqDraft
+        TitleFont.Style = [fsBold]
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited TsCadastro: TTabSheet
+      ClientHeight = 330
+      ClientWidth = 573
+      inherited pnpRODAPE: TPanel
+        Top = 280
+        Width = 573
+        ClientWidth = 573
+        TabOrder = 3
+        inherited BtnIncluir: TSpeedButton
+          OnClick = BtnIncluirClick
+        end
+        inherited BtnAltera: TSpeedButton
+          OnClick = BtnAlteraClick
+        end
+        inherited BtnApaga: TSpeedButton
+          OnClick = BtnApagaClick
+        end
+        inherited BtnSalva: TSpeedButton
+          OnClick = BtnSalvaClick
+        end
+        inherited BtnCancela: TSpeedButton
+          OnClick = BtnCancelaClick
+        end
+      end
+      object Label1: TLabel[1]
+        Left = 74
+        Height = 16
+        Top = 47
+        Width = 49
+        Caption = 'Código .:'
+      end
+      object EdtCODIGO: TEdit[2]
+        Tag = 99
+        Left = 74
+        Height = 24
+        Top = 74
+        Width = 80
+        CharCase = ecUppercase
+        Enabled = False
+        NumbersOnly = True
+        TabOrder = 0
+      end
+      object Label2: TLabel[3]
+        Left = 74
+        Height = 16
+        Top = 105
+        Width = 64
+        Caption = 'Descrição .:'
+      end
+      object EdtDescricao: TEdit[4]
+        Left = 74
+        Height = 24
+        Top = 131
+        Width = 451
+        CharCase = ecUppercase
+        TabOrder = 1
+      end
+      object Label3: TLabel[5]
+        Left = 74
+        Height = 16
+        Top = 164
+        Width = 33
+        Caption = 'Tipo .:'
+      end
+      object cmbTipo: TComboBox[6]
+        Left = 74
+        Height = 24
+        Top = 190
+        Width = 54
+        CharCase = ecUppercase
+        ItemHeight = 16
+        Items.Strings = (
+          'C'
+          'D'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+    end
+  end
+  inherited pnpTITULO: TPanel
+    Width = 581
+    Caption = 'Cadastro Plano de Contas'
+  end
+  object qrPESQ: TZQuery[3]
+    Connection = TabGlobal.conexao
+    SQL.Strings = (
+      'select * from planos'
+      'ORDER BY descricao limit 30;'
+    )
+    Params = <>
+    Left = 280
+    Top = 270
+    object qrPESQid_plano: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'id_plano'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrPESQdescricao: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 80
+    end
+    object qrPESQtipo: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'tipo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+  end
+  object dsPESQ: TDataSource[4]
+    DataSet = qrPESQ
+    Left = 336
+    Top = 270
+  end
+end

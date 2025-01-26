@@ -1,0 +1,10 @@
+inherited frmcad_usuarios: Tfrmcad_usuarios
+  Position = poOwnerFormCenter
+  inherited pnpTITULO: TPanel
+    Caption = 'Cadastro de Usuários'
+  end
+  inherited PageControl1: TPageControl
+    ActivePage = TsPESQUISA
+    TabIndex = 0
+  end
+end
